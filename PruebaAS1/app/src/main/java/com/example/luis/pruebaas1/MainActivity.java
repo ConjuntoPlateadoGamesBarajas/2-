@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -35,8 +36,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //Esperan el click
         boton.setOnClickListener(this);
         boton2.setOnClickListener(this);
+        onResume();
     }
-
+    protected void onResume() {
+        super.onResume();
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -83,7 +87,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //Esto también
             case R.id.button2:
                // Toast.makeText(getApplicationContext(),R.string.Pao,Toast.LENGTH_SHORT).show();
+                Intent settings = new Intent(MainActivity.this,Configuracion.class);
+                startActivity(settings);
                 break;
         }
     }
+
 }
