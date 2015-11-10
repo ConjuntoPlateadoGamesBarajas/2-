@@ -1,21 +1,15 @@
 package com.example.luis.pruebaas1;
 
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -28,8 +22,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        titleActivity();
         mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.sound);
-        mediaPlayer.start();
+        //mediaPlayer.start();
         //Igualacion de objeto Java con Objeto Xml
         image = (ImageView) findViewById(R.id.imageView);
         boton = (Button) findViewById(R.id.button);
@@ -71,8 +66,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //El id del boton seleccionado es v.getId
             case R.id.button:
 
-                //Se manda a llamar la SecondActivity
-                Intent intent = new Intent(MainActivity.this,SecondActivity.class);
+                //Se manda a llamar la SecondAct
+                Intent intent = new Intent(MainActivity.this,SecondAct.class);
                 startActivity(intent);
 
                 //Esto es una mamamda
@@ -91,5 +86,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
     }
-
+    private  void titleActivity(){
+        this.setTitle(getResources().getString(R.string.app_name));
+    }
 }

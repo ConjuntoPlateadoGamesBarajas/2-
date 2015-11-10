@@ -4,15 +4,20 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.LabeledIntent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.view.KeyEvent;
 import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -29,7 +34,7 @@ import java.util.Locale;
 /**
  * Created by Carlos on 01/10/2015.
  */
-public class Configuracion extends Activity{
+public class Configuracion extends AppCompatActivity {
     private SeekBar seekBar;
     private TextView textView;
     private AudioManager audioManager;
@@ -49,10 +54,10 @@ public class Configuracion extends Activity{
         // Inicializa funciones de audio
         //mediaPlayer = MediaPlayer.create(Configuracion.this,R.raw.sound);
         //mediaPlayer.start();
-
         Volumen();
         lenguajes();
         chekBoxVolume();
+        titleActivity();
        /* super.onCreate(savedInstanceState);
         Button back=(Button) findViewById(R.id.buttonBack);
         back.setOnClickListener(new View.OnClickListener() {
@@ -132,8 +137,8 @@ public class Configuracion extends Activity{
 
     }
     public void setLocale(String lang) {
-
         myLocale = new Locale(lang);
+        Locale.setDefault(myLocale);
         Resources res = getResources();
         DisplayMetrics dm = res.getDisplayMetrics();
         Configuration conf = res.getConfiguration();
@@ -170,7 +175,7 @@ public class Configuracion extends Activity{
             }
         });
     }
-
+    //back button refresca la pantalla principal al presionarlo
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
@@ -180,6 +185,16 @@ public class Configuracion extends Activity{
             return true;
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    private  void titleActivity(){
+        this.setTitle(getResources().getString(R.string.configuracion));
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_settings, menu);
+        return true;
     }
 }
 

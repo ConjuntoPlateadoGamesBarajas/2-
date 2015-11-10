@@ -13,7 +13,7 @@ import android.widget.Toast;
 import java.util.Random;
 
 
-public class SecondActivity extends ActionBarActivity implements View.OnClickListener {
+public class SecondAct extends ActionBarActivity implements View.OnClickListener {
 
     Boolean Unavez = true;
 
@@ -26,7 +26,7 @@ public class SecondActivity extends ActionBarActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-
+        titleActivity();
         //Igualacion de objeto Java con Objeto Xml
         Pregunta = (TextView) findViewById(R.id.Pregunta);
         Score = (TextView) findViewById(R.id.Score);
@@ -140,23 +140,25 @@ public class SecondActivity extends ActionBarActivity implements View.OnClickLis
                 //Imprecion de respuestas en los botones.
                 Resp1.setText(""+realResp);
                 Resp2.setText(""+(realResp+rand3));
-                Resp3.setText(""+(realResp+(rand3*2)));
+                Resp3.setText("" + (realResp + (rand3 * 2)));
                 break;
 
             case 2:
                 Resp1.setText(""+(realResp+rand3));
                 Resp2.setText(""+realResp);
-                Resp3.setText(""+(realResp+(rand3*2)));
+                Resp3.setText("" + (realResp + (rand3 * 2)));
                 break;
 
             case 3:
                 Resp1.setText(""+(realResp+(rand3*2)));
                 Resp2.setText(""+(realResp+rand3));
-                Resp3.setText(""+realResp);
+                Resp3.setText("" + realResp);
                 break;
         }
     }
 
-
+    private  void titleActivity(){
+        this.setTitle(getResources().getString(R.string.title_activity_second));
+    }
 }
 //Fin :3

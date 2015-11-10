@@ -8,7 +8,9 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.example.luis.pruebaas1.Configuracion"
-    android:backgroundTint="#e800637b">
+    android:backgroundTint="#f43c393c"
+
+    android:background="#e9929292">
 
 
 
@@ -18,17 +20,19 @@
         android:text="@string/sonido"
         android:id="@+id/textSonido"
         android:textSize="25dp"
+        android:textColor="@android:color/white"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignLeft="@+id/textVolumen"
+        android:layout_alignStart="@+id/textVolumen" />
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/black"
+        android:layout_height="0.5dp"
+        android:background="@android:color/darker_gray"
         android:layout_below="@+id/textSonido"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/view1" />
+        android:id="@+id/view1"
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -40,7 +44,9 @@
         android:layout_marginTop="25dp"
         android:layout_below="@+id/view1"
         android:layout_alignLeft="@+id/textView1"
-        android:layout_alignStart="@+id/textView1" />
+        android:layout_alignStart="@+id/textView1"
+        android:textColor="@android:color/white"
+        />
 
     <SeekBar
 
@@ -51,7 +57,8 @@
         android:layout_below="@+id/textVolumen"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="44dp" />
+        android:layout_marginTop="44dp"
+        />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -66,7 +73,6 @@
         android:layout_alignParentEnd="true"
         android:text=""
         android:layout_marginTop="-07dp"
-
         android:backgroundTint="#ff02b2ff" />
     <TextView
         android:id="@+id/textView1"
@@ -86,15 +92,17 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_centerVertical="true"
         android:layout_alignLeft="@+id/textVolumen"
-        android:layout_alignStart="@+id/textVolumen" />
+        android:layout_alignStart="@+id/textVolumen"
+        android:textColor="@android:color/white"/>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@android:color/black"
+        android:background="@android:color/darker_gray"
         android:id="@+id/view2"
         android:layout_below="@+id/textLenguaje"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        />
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -104,7 +112,7 @@
         android:layout_below="@+id/view2"
         android:layout_toRightOf="@+id/textView1"
         android:layout_toEndOf="@+id/textView1"
-
+        android:textColor="@android:color/white"
         android:layout_marginTop="42dp"
         />
 
@@ -116,7 +124,10 @@
         android:entries="@array/country_arrays"
         android:prompt="@string/country_prompt"
         android:layout_alignLeft="@+id/textIdioma"
-        android:layout_alignStart="@+id/textIdioma" />
+        android:layout_alignStart="@+id/textIdioma"
+        android:textColor="@android:color/white"
+
+        />
 
     <!--Button
         style="?android:attr/buttonStyleSmall"

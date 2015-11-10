@@ -1,11 +1,12 @@
 <resources>
-    <string name="app_name">Prueba AS 1</string>
+    <string name="app_name">Actividad Principal</string>
 
     <string name="hello_world">Hola mundo!</string>
     <string name="country_prompt">Elige un Idioma</string>
     <string name="Play">Jugar</string>
     <string name="action_settings">Configuracion</string>
-    <string name="title_activity_second">SecondActivity</string>
+    <string name="configuracion">Configuracion</string>
+    <string name="title_activity_second">SegundaActividad</string>
     <string name="score">Puntos</string>
     <string name="sonido">SONIDO</string>
     <string name="volumen">Volumen   </string>

@@ -5,7 +5,8 @@
     <string name="country_prompt">Choisissez une Lenguage</string>
     <string name="Play">Joue</string>
     <string name="action_settings">Paramètres</string>
-    <string name="title_activity_second">SecondActivity</string>
+    <string name="configuracion">Paramètres</string>
+    <string name="title_activity_second">SecondActivity2</string>
     <string name="score">But</string>
     <string name="sonido">Du son</string>
     <string name="volumen">Le volume</string>
