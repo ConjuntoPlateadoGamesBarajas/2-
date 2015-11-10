@@ -13,7 +13,11 @@
     <string name="lenguaje">LA LANGUE</string>
     <string name="Idioma">LA LANGUE</string>
     <string name="atras">Arrière</string>
-
+    <string name="creditos">Crédits</string>
+    <string name="nivel">Niveler</string>
+    <string name="facil">Aisé</string>
+    <string name="medio">Moyen</string>
+    <string name="dificl">Difficile</string>
     <string-array name="country_arrays">
         <item>Pays</item>
         <item>--------------------------------------------</item>

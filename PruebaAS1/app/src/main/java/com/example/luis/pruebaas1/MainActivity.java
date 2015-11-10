@@ -9,13 +9,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     ImageView image;
-    Button boton,boton2;
+    ImageButton boton;
+    ImageButton boton2;
+    Button boton3;
     EditText text;
     MediaPlayer mediaPlayer;
     @Override
@@ -23,17 +26,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         titleActivity();
-        mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.sound);
+        //mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.sound);
         //mediaPlayer.start();
         //Igualacion de objeto Java con Objeto Xml
-        image = (ImageView) findViewById(R.id.imageView);
-        boton = (Button) findViewById(R.id.button);
-        boton2 = (Button) findViewById(R.id.button2);
-        text = (EditText) findViewById(R.id.editText);
+        boton = (ImageButton) findViewById(R.id.button);
+        boton2 = (ImageButton) findViewById(R.id.settings_button);
+        boton3 = (Button) findViewById(R.id.credits_button);
 
         //Esperan el click
         boton.setOnClickListener(this);
         boton2.setOnClickListener(this);
+        boton3.setOnClickListener(this);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -67,26 +70,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button:
 
                 //Se manda a llamar la SecondAct
-                Intent intent = new Intent(MainActivity.this,SecondAct.class);
+                Intent intent = new Intent(MainActivity.this,Niveles.class);
                 startActivity(intent);
-
-                //Esto es una mamamda
-                if(image.isShown()){
-                    image.setVisibility(View.INVISIBLE);
-                }
-                else
-                    image.setVisibility(View.VISIBLE);
                 break;
 
             //Esto también
-            case R.id.button2:
+            case R.id.settings_button:
                // Toast.makeText(getApplicationContext(),R.string.Pao,Toast.LENGTH_SHORT).show();
                 Intent settings = new Intent(MainActivity.this,Configuracion.class);
                 startActivity(settings);
+                break;
+            case  R.id.credits_button:
+                Intent credits = new Intent(MainActivity.this,Credits.class);
+                startActivity(credits);
                 break;
         }
     }
     private  void titleActivity(){
         this.setTitle(getResources().getString(R.string.app_name));
     }
+
 }

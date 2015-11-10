@@ -43,6 +43,31 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.luis.pruebaas1.MainActivity" />
         </activity>
+        <activity
+            android:name=".Credits"
+            android:label="@string/creditos"
+            android:configChanges="locale"
+            android:noHistory="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.luis.pruebaas1.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Niveles"
+            android:label="@string/nivel"
+            android:configChanges="locale">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

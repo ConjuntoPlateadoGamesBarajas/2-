@@ -13,6 +13,11 @@
     <string name="lenguaje">LENGUAJE</string>
     <string name="Idioma">Idioma       </string>
     <string name="atras">Regresar</string>
+    <string name="creditos">Créditos</string>
+    <string name="nivel">Nivel</string>
+    <string name="facil">Fácil</string>
+    <string name="medio">Medio</string>
+    <string name="dificl">Difícil</string>
     <string-array name="country_arrays">
         <item>Pais</item>
         <item>--------------------------------------------</item>
