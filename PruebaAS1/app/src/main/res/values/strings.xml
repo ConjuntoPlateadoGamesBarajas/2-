@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Actividad Principal</string>
+    <string name="app_name">2++</string>
 
     <string name="hello_world">Hola mundo!</string>
     <string name="country_prompt">Elige un Idioma</string>

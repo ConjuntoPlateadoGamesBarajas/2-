@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MainActivity</string>
+    <string name="app_name">2++</string>
 
     <string name="hello_world">Hello World!</string>
     <string name="country_prompt">Choose a Lenguage</string>
